@@ -5,6 +5,8 @@
 #include <vector>
 #include <DrawCircle.h>
 #include <DrawSquare.h>
+#include <DrawTriangle.h>
+
 class Shape;
 
 void drawAllShapes(std::vector<std::unique_ptr<Shape>> const& shapes);
