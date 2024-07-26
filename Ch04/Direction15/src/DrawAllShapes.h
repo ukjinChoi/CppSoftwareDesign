@@ -3,9 +3,6 @@
 #define __DRAW_ALL_SHAPES_H__
 #include <memory>
 #include <vector>
-#include <DrawCircle.h>
-#include <DrawSquare.h>
-#include <DrawTriangle.h>
 
 class Shape;
 

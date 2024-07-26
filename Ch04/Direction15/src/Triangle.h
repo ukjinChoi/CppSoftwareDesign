@@ -8,12 +8,11 @@ class Triangle : public Shape
 {
 public:
     explicit Triangle(double side)
-    : Shape(triangle), side_(side)
+    : side_(side)
     {
         /* 주어진 side가 유효한지 확인한다. */
     }
-    double side() const { return side_; }
-    Point center() const { return center_; }
+    void draw() const override;
 private:
     double side_;
     Point center_;
