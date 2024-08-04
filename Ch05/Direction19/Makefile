@@ -1,4 +1,4 @@
-TARGET = ex04
+TARGET = ex05
 LDFLAGS =
 CXXFLAGS = -O2 -Wall -std=c++17 -stdlib=libc++
 INCLUDE = -I$(SRC_DIR)

@@ -2,14 +2,14 @@
 #define __SQUARE_H__
 #include <Point.h>
 #include <Shape.h>
-#include <DrawSquareStrategy.h>
+#include <DrawStrategy.h>
 #include <memory>
 #include <utility>
 
 class Square : public Shape
 {
 public:
-    explicit Square( double side, std::unique_ptr<DrawSquareStrategy> drawer)
+    explicit Square( double side, std::unique_ptr<DrawStrategy<Square>> drawer)
     : side_ (side)
     , drawer_(std::move(drawer))
     {}
@@ -22,6 +22,6 @@ public:
 private:
     double side_;
     Point center_;
-    std::unique_ptr<DrawSquareStrategy> drawer_;
+    std::unique_ptr<DrawStrategy<Square>> drawer_;
 };
 #endif

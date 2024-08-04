@@ -3,14 +3,14 @@
 
 #include <Point.h>
 #include <Shape.h>
-#include <DrawCircleStrategy.h>
+#include <DrawStrategy.h>
 #include <memory>
 #include <utility>
 
 class Circle : public Shape
 {
 public:
-    explicit Circle( double radius, std::unique_ptr<DrawCircleStrategy> drawer )
+    explicit Circle( double radius, std::unique_ptr<DrawStrategy<Circle>> drawer )
     : radius_( radius )
     , drawer_( std::move(drawer) )
     {
@@ -25,7 +25,7 @@ public:
 private:
     double radius_;
     Point center_{};
-    std::unique_ptr<DrawCircleStrategy> drawer_;
+    std::unique_ptr<DrawStrategy<Circle>> drawer_;
 };
 
 #endif
