@@ -15,7 +15,6 @@ public:
     }
     double radius() const { return radius_; }
     Point center() const { return center_; }
-    void draw( /* 몇몇 인자 */ ) const override;
 private:
     double radius_;
     Point center_{};

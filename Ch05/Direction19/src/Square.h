@@ -11,7 +11,6 @@ public:
     {}
     double side() const { return side_; }
     Point center() const { return center_; }
-    void draw() const override;
 private:
     double side_;
     Point center_;
